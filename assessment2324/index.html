@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkplek Gezocht HA</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Permanent+Marker&family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <img id="hp" class="logo" src="img/Home.png"></img>
+  <header>
+    <nav>
+    <a href=""><img id="hd" class="logoP" src="img/Home.png"></img><a>
+    <a id="hp" href="">Home</a>
+    <a id="hp" href="">Contact</a>
+    </nav>
+      <button onclick="showmenu()" id="navbutton">
+        <img class="menubutton" src="img/hamburger.png" alt="Menu">
+      </button>
+
+  </header>
+
+    <ul id="menu" class="menu">
+      <li id="hd"><a href="">Home</a></li>
+      <li><a href="">Werkplekken voor laptop en wifi</a></li>
+      <li><a href="">Werkplekken met andere zzp'ers</a></li>
+      <li><a href="">Werkplekken met voorzieningen</a></li>
+      <li><a href="">Zelf een goede werkplek vinden</a></li>
+      <li id="hd"><a href="">Contact</a></li>
+    </ul>
+
+  <main role="main">
+  </main>
+
+  <footer>
+    <a>&copy; 2025 WG </a>
+    <a id="hp" href="" class="contactfooter">Contact</a>
+  </footer>
+</body>
+</html>
+
+<script>
+  function showmenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('visible'); 
+  }
+
+   document.addEventListener('click', function(event) {
+    const click = navbutton.contains(event.target);
+
+    if (!click) {
+      menu.classList.remove('visible');
+    }
+  });
+</script>
