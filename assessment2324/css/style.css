@@ -47,6 +47,7 @@ header {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 50px;
+  box-shadow: 10px 5px 10px var(--secondary-color);
 }
 
 header a {
@@ -177,6 +178,8 @@ footer {
   header {
     background-color: var(--secondary-color);
     border-radius: 0px;
+    border-bottom: 5px var(--primary-color) solid;
+    box-shadow: 0px 0px 0px;
 
   }
   header a {
