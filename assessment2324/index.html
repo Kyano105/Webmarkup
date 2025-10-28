@@ -8,17 +8,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Permanent+Marker&family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="author" content="Kyano Hendriks">
+  <meta name="description" content="Vind rustige werkplekken in Haarlem met wifi, stopcontacten en sfeer. Voor zzp'ers en remote workers.">
+  <meta name="keywords" content="werkplek, Haarlem, zzp, wifi, coworking">
+
 </head>
 <body>
-  <img id="hp" class="logo" src="img/Home.png"></img>
+  <figure id="hp">
+  <img src="img/Home.png" alt="Homepagina icoon" class="logo" title="Homepagina">
+  <figcaption>Het logo van Werkplek Gezocht</figcaption>
+</figure>
+
   <header>
     <nav>
-    <a href=""><img id="hd" class="logoP" src="img/Home.png"></img><a>
+    <a href=""><img id="hd" class="logoP" alt="Homepagina icoon" src="img/Home.png" title="Homepagina"></img></a>
     <a id="hp" href="">Home</a>
     <a id="hp" href="">Contact</a>
     </nav>
       <button onclick="showmenu()" id="navbutton">
-        <img class="menubutton" src="img/hamburger.png" alt="Menu">
+        <img class="menubutton" src="img/hamburger.png" alt="Menu" title="Menu">
       </button>
 
   </header>
@@ -31,8 +39,29 @@
       <li><a href="">Zelf een goede werkplek vinden</a></li>
       <li id="hd"><a href="">Contact</a></li>
     </ul>
+     <ul id="menu2" class="menu">
+      <li><a href="">Werkplekken voor laptop en wifi</a></li>
+      <li><a href="">Werkplekken met andere zzp'ers</a></li>
+      <li><a href="">Werkplekken met voorzieningen</a></li>
+    </ul>
 
   <main role="main">
+    <section class="borderbottom">
+    <article><h1>Vind jouw ideale rustige werkplek in Haarlem</h1> <p><em>Werk slimmer, niet harder.</em> Ontdek cafés, bibliotheken en co-working spaces met wifi en stopcontacten.</p> <button id="werkbutton" class="homepagebuttons" onclick="showmenu2()">Bekijk Werkplekken</button> <p>Veel zzp’ers en remote workers hebben moeite om een fijne plek te vinden om te werken. Vooral als je tussen 2 afspraken in geen zin of tijd hebt om naar huis te gaan of simpel weg gewoon even buitenshuis wil werken. Ons platform helpt je bij het ontdekken van rustige werkplekken in Haarlem.</p></article>
+    <aside><img src="img/img1.png" alt="Wifi img" class="images" title="IMG1"></aside>
+    </section>
+
+    <section class="borderbottom"id="Sline">
+    <aside><img src="img/img2.png" alt="Stroom img" class="images" title="IMG2"></aside>
+    
+    <article><h1>waarom is dit belangrijk?</h1><p>Als <strong>zzp’er</strong> of <strong>remote worker</strong> weet je hoe lastig het kan zijn om gefocust te blijven. Thuis zijn er afleidingen en in drukke cafés is het moeilijk om geconcentreerd te werken. Een rustige werkplek met wifi en goede faciliteiten geeft je de kans om productief te zijn, je creativiteit te vergroten en zonder stress je werkdag door te komen. Zo houd je meer tijd en energie over voor de dingen die écht belangrijk zijn.</p> </article>
+    
+    </section>
+    <section>
+    <article><h1>Help ons mee!</h1><p> We zijn bezig met het verzamelen van de fijnste werkplekken in Haarlem, van rustige cafés tot inspirerende co-working spaces met goede wifi en voldoende stopcontacten. We willen het makkelijker maken voor zzp’ers en remote workers om snel een fijne plek te vinden om te werken, zonder eindeloos te hoeven zoeken. alle suggesties zijn welkom dus neem zeker contact met ons op zodat wij ons platform kunnen versterken!</p> <button class="homepagebuttons">Contact</button> </article>
+    <aside><img src="img/img3.png" alt="Connect img" class="images" title="IMG3"></aside>
+    </section>
+    
   </main>
 
   <footer>
@@ -43,16 +72,28 @@
 </html>
 
 <script>
-  function showmenu() {
-    const menu = document.getElementById('menu');
+  const menu = document.getElementById('menu');
+  const menu2 = document.getElementById('menu2');
+  
+  function showmenu() { 
     menu.classList.toggle('visible'); 
+    menu2.classList.remove('visible');
+  }
+  function showmenu2() {
+     menu.classList.remove('visible'); 
+    menu2.classList.toggle('visible'); 
   }
 
    document.addEventListener('click', function(event) {
     const click = navbutton.contains(event.target);
+    const click2 = werkbutton.contains(event.target);
 
     if (!click) {
       menu.classList.remove('visible');
+      
+    }
+    if (!click2) {
+      menu2.classList.remove('visible');
     }
   });
 </script>
