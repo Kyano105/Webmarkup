@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkplek Gezocht HA</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Permanent+Marker&family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="author" content="Kyano Hendriks">
+  <meta name="description" content="Vind rustige werkplekken in Haarlem met wifi, stopcontacten en sfeer. Voor zzp'ers en remote workers.">
+  <meta name="keywords" content="werkplek, Haarlem, zzp, wifi, coworking">
+
+</head>
+<body>
+  <figure id="hp">
+  <img src="img/Home.png" alt="Homepagina icoon" class="logo" title="Homepagina">
+  <figcaption>Het logo van Werkplek Gezocht</figcaption>
+</figure>
+
+  <header>
+    <nav>
+    <a href="index.html"><img id="hd" class="logoP" alt="Homepagina icoon" src="img/Home.png" title="Homepagina"></img></a>
+    <a id="hp" href="index.html">Home</a>
+    <a id="hp" href="contact.html">Contact</a>
+    </nav>
+      <button onclick="showmenu()" id="navbutton">
+        <img class="menubutton" src="img/hamburger.png" alt="Menu" title="Menu">
+      </button>
+
+  </header>
+
+    <ul id="menu" class="menu">
+      <li id="hd"><a href="index.html">Home</a></li>
+      <li><a href="wvlw.html">Werkplekken voor laptop en wifi</a></li>
+      <li><a href="wmza.html">Werkplekken met andere zzp'ers</a></li>
+      <li><a href="wmv.html">Werkplekken met voorzieningen</a></li>
+      <li><a href="zegwv.html">Zelf een goede werkplek vinden</a></li>
+      <li id="hd"><a href="contact.html">Contact</a></li>
+    </ul>
+
+  <main role="main">
+    <section class="borderbottom">
+    <article><h1>Werken met laptop & wifi</h1> <p>Een goede verbinding en voldoende stroompunten zijn essentieel voor productief werk. Deze werkplekken zijn praktisch en technisch goed uitgerust voor digitale professionals. Als zzp’er wil je zonder gedoe aan de slag kunnen. Dat betekent: een betrouwbare wifi-verbinding, genoeg stopcontacten en een tafel waar je comfortabel kunt werken. Niet elk café of openbare ruimte biedt die basis, terwijl die cruciaal is voor je werkdag.</p></article>
+    <section id="hd" class="borderbottom"></section>
+    <aside><img src="img/img6.png" alt="laptop img" class="images" title="IMG6"></aside>
+    </section>
+
+    <section class="borderbottom"id="Sline">
+    <article><h1>Slim werken begint met de juiste plek</h1><p>Je bent vaak onderweg tussen afspraken of hebt simpelweg geen zin om thuis te werken. Een fijne plek vinden waar je moeiteloos je laptop openklapt en direct aan de slag kunt, maakt een groot verschil in productiviteit én gemak. Wij helpen je bij het vinden van locaties waar goede wifi en voldoende stroompunten de standaard zijn. Zo hoef jij alleen nog je laptop open te klappen en kun je direct beginnen.</p></article>
+    <section id="hd" class="borderbottom"></section>
+    <aside><img src="img/img7.png" alt="werk img" class="images" title="IMG7"></aside>
+    </section>
+
+    <section>
+    <article><h1>werkplekken met wifi en stroompunten:</h1>
+
+        <ol>
+         <li>
+          <strong>De Laptop Lounge</strong><br>
+           <small>Adres: Grote Markt 24, 2011 RD Haarlem</small>
+         </li>
+         <li>
+          <strong>Werkplaats De Koepel</strong><br>
+          <small>Adres: Koepelplein 2, 2012 CR Haarlem</small>
+         </li>
+         <li>
+           <strong>Café Connect</strong><br>
+           <small>Adres: Haarlemmerhout 21, 2012 SN Haarlem</small>
+         </li>
+         <li>
+           <strong>The Digital Dock</strong><br>
+           <small>Adres: Houtmarkt 15, 2012 HA Haarlem</small>
+          </li>
+         <li>
+          <strong>Haarlem Hub</strong><br>
+           <small>Adres: Stationplein 5, 2015 AB Haarlem</small>
+         </li>
+         <li>
+          <strong>Het Netwerk Nest</strong><br>
+          <small>Adres: Patronaatstraat 3, 2011 HT Haarlem</small>
+         </li>
+        </ol>
+    
+    </article>
+    <aside ><img src="img/img8.png" alt="Kaart img" class="images" title="IMG8"></aside>
+    </section>
+    
+  </main>
+
+  <footer>
+    <a>&copy; 2025 WG </a>
+    <a id="hp" href="contact.html" class="contactfooter">Contact</a>
+  </footer>
+</body>
+</html>
+
+<script>
+  const menu = document.getElementById('menu');
+  const menu2 = document.getElementById('menu2');
+  
+  function showmenu() { 
+    menu.classList.toggle('visible'); 
+    menu2.classList.remove('visible');
+  }
+  function showmenu2() {
+     menu.classList.remove('visible'); 
+    menu2.classList.toggle('visible'); 
+  }
+
+   document.addEventListener('click', function(event) {
+    const click = navbutton.contains(event.target);
+    const click2 = werkbutton.contains(event.target);
+
+    if (!click) {
+      menu.classList.remove('visible');
+      
+    }
+    if (!click2) {
+      menu2.classList.remove('visible');
+    }
+  });
+</script>

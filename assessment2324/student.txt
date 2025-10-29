@@ -1,3 +1,5 @@
 Student name: Kyano Hendriks
 Student number: 741488
 Student class: INF1A
+github repository url: https://github.com/Kyano105/Webmarkup
+github pages urlL https://kyano105.github.io
