@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Werkplek Gezocht HA</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Permanent+Marker&family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="author" content="Kyano Hendriks">
+  <meta name="description" content="Vind rustige werkplekken in Haarlem met wifi, stopcontacten en sfeer. Voor zzp'ers en remote workers.">
+  <meta name="keywords" content="werkplek, Haarlem, zzp, wifi, coworking">
+
+</head>
+<body>
+  <figure id="hp">
+  <img src="img/Home.png" alt="Homepagina icoon" class="logo" title="Homepagina">
+  <figcaption>Het logo van Werkplek Gezocht</figcaption>
+</figure>
+
+  <header>
+    <nav>
+    <a href="index.html"><img id="hd" class="logoP" alt="Homepagina icoon" src="img/Home.png" title="Homepagina"></img></a>
+    <a id="hp" href="index.html">Home</a>
+    <a id="hp" href="contact.html">Contact</a>
+    </nav>
+      <button onclick="showmenu()" id="navbutton">
+        <img class="menubutton" src="img/hamburger.png" alt="Menu" title="Menu">
+      </button>
+
+  </header>
+
+    <ul id="menu" class="menu">
+      <li id="hd"><a href="index.html">Home</a></li>
+      <li><a href="wvlw.html">Werkplekken voor laptop en wifi</a></li>
+      <li><a href="wmza.html">Werkplekken met andere zzp'ers</a></li>
+      <li><a href="wmv.html">Werkplekken met voorzieningen</a></li>
+      <li><a href="zegwv.html">Zelf een goede werkplek vinden</a></li>
+      <li id="hd"><a href="contact.html">Contact</a></li>
+    </ul>
+
+  <main role="main">
+    <section id="hd"><aside><img src="img/img13.png" alt="kaart img" class="images" title="IMG8"></aside></section>
+    <section class="borderbottom"></section>
+    <article class="zegwv">
+        <h1>Rustige werkplekken herkennen</h1>
+         <p>Geen afleiding — alleen jij en je werk. Hier zijn een aantal praktische tips om je eigen rustige werkplek te vinden en te beoordelen. Of je nu thuiswerkt, op locatie of in een café, deze suggesties helpen je om meer focus en minder afleiding te ervaren.</p><p>1. Ga buiten piekuren kijken Bezoek potentiële werkplekken op rustige tijdstippen, zoals vroeg in de ochtend, laat in de middag of doordeweeks tijdens schooluren. Vermijd lunchpauzes of weekenddrukte, wanneer cafés en andere openbare plekken vaak vol zitten.</p><p>2. Let op de akoestiek en indeling De inrichting van een ruimte beïnvloedt direct het geluidsniveau. Harde vloeren, kale muren en open ruimtes weerkaatsen geluid, waardoor het rumoeriger aanvoelt. Muziek, koffiemachines en gesprekken dragen bij aan afleiding.</p><p>3. Check reviews van andere remote workers Veel freelancers en thuiswerkers delen hun ervaringen op Google Reviews, Yelp of gespecialiseerde websites zoals Workfrom, Coworker of Nomad List. Deze platforms geven vaak hints over hoe rustig of geschikt een werkplek is.</p><p>4. Vraag het personeel Medewerkers van cafés, bibliotheken of hotels kennen de plek als geen ander. Ze kunnen je vaak vertellen welke momenten van de dag of welke tafels het rustigst zijn — of juist wanneer je beter een andere plek kunt zoeken.</p><p>5. Zoek buiten de bekende cafés De populaire koffietenten zijn vaak druk en rumoerig, vooral in studentensteden of wijken met veel digital nomads. Richt je in plaats daarvan op alternatieve plekken:<ul></p><p>Voorbeelden van rustige alternatieven:</li><li>Bibliotheken (meestal stil, met goede wifi en stopcontacten)</li><li>Museumcafés (vaak rustig en inspirerend qua sfeer)</li><li>Hotel-lobby’s (vooral ’s ochtends of overdag, met comfortabele zitjes)</li><li>Culturele centra of boekwinkels met een caféruimte</li></ul><p>6. Test het zelf — neem je werk even mee Uiteindelijk merk je pas echt of een plek bij je past door er te werken. Neem je laptop, een koptelefoon en wat werk mee en probeer het eens een uurtje. Zo voel je of de omgeving je helpt om te focussen.</p>
+    </article>
+    <section class="borderbottom"></section>
+    <section id="hd"><aside><img src="img/img15.png" alt="kaart img" class="images" title="IMG8"></aside></section>
+    <section id="hp" class="gallery">
+      <aside><img id="gallery" src="img/img13.png" alt="kaart img" class="images" title="IMG8"></aside>
+      <aside><img id="gallery" src="img/img14.png" alt="kaart img" class="images" title="IMG8"></aside>
+      <aside><img id="gallery" src="img/img15.png" alt="kaart img" class="images" title="IMG8"></aside>  
+    </section>
+  </main>
+
+  <footer>
+    <a>&copy; 2025 WG </a>
+    <a id="hp" href="contact.html" class="contactfooter">Contact</a>
+  </footer>
+</body>
+</html>
+
+<script>
+  const menu = document.getElementById('menu');
+  const menu2 = document.getElementById('menu2');
+  
+  function showmenu() { 
+    menu.classList.toggle('visible'); 
+    menu2.classList.remove('visible');
+  }
+  function showmenu2() {
+     menu.classList.remove('visible'); 
+    menu2.classList.toggle('visible'); 
+  }
+
+   document.addEventListener('click', function(event) {
+    const click = navbutton.contains(event.target);
+    const click2 = werkbutton.contains(event.target);
+
+    if (!click) {
+      menu.classList.remove('visible');
+      
+    }
+    if (!click2) {
+      menu2.classList.remove('visible');
+    }
+  });
+</script>
